@@ -1,0 +1,9 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# Your rule content
+
+- always place unit tests file next to original file (same folder) and name it *.test.ts

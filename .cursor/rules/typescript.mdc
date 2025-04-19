@@ -3,3 +3,4 @@ description:
 globs: 
 alwaysApply: true
 ---
+- always write typescript code

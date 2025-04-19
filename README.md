@@ -1,24 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Chat App
+
+A simple chat application built with Next.js and TypeScript that allows users to send messages and receive automated support responses.
+
+## Features
+
+- Real-time message display
+- User-friendly interface
+- Automated support responses
+- Responsive design
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Testing
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The application uses Jest and React Testing Library for unit tests. To run tests:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Run tests
+npm test
+
+# Run tests with coverage report
+npm test -- --coverage
+```
+
+Current test coverage:
+
+- Statement coverage: 92.45%
+- Branch coverage: 83.33%
+- Function coverage: 81.25%
+- Line coverage: 94%
+
+## Test Summary for QA
+
+### Chat Component Tests (`src/components/Chat.test.tsx`)
+
+- ✅ Renders chat interface and loads initial messages
+- ✅ Sends messages via button click
+- ✅ Sends messages via Enter key
+- ✅ Prevents empty message submission
+- ✅ Handles API fetch errors gracefully
+
+### Messages API Tests (`src/app/api/messages/route.test.ts`)
+
+- ✅ GET /api/messages returns message list
+- ✅ POST /api/messages creates new message with support response
+- ✅ Handles invalid JSON payloads
+
+Test Coverage: 92.45% statements, 83.33% branches
+
+## Project Structure
+
+- `src/components/Chat.tsx` - Main chat component
+- `src/app/api/messages/route.ts` - API endpoint for message handling
+
+## Technologies Used
+
+- Next.js
+- TypeScript
+- React
+- Jest
+- React Testing Library
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Learn More
 
